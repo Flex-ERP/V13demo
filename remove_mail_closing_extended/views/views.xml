@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record id="customize_sales_mail" model="ir.ui.view">
+            <field name="name">res.config.settings.inherit.mail.view</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="10"/>
+            <field name="inherit_id" ref="mail.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <div id="emails" position="after">
+                    <h2>Email Adjustments</h2>
+                    <div class="row mt16 o_settings_container" id="emails_adjustments">
+
+                        <!--Field for Hide Best Regards-->
+                        <div class="col-12 col-lg-6 o_setting_box"
+                             title="With this option you will remove 'Best regards' from any email">
+                            <div class="o_setting_left_pane">
+                                <field name="hide_bestregards"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hide_bestregards"/>
+                                <div class="text-muted" id="hide_bestregards">
+                                    Remove Best regards from Email
+                                </div>
+                            </div>
+                        </div>
+                        <!--Field for Hide Header-->
+
+                        <div class="col-12 col-lg-6 o_setting_box"
+                             title="With this option you will remove the Header from any email">
+                            <div class="o_setting_left_pane">
+                                <field name="hide_header"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hide_header"/>
+                                <div class="text-muted" id="hide_header">
+                                    Remove Header from Email
+                                </div>
+                            </div>
+                        </div>
+                        <!--Field for Hide Footer-->
+
+                        <div class="col-12 col-lg-6 o_setting_box"
+                             title="With this option you will remove Footer from any email">
+                            <div class="o_setting_left_pane">
+                                <field name="hide_footer"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="hide_footer"/>
+                                <div class="text-muted" id="hide_footer">
+                                    Remove Footer from Email
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>
