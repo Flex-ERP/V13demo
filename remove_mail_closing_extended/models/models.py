@@ -103,7 +103,7 @@ class MailComposerInherit(models.TransientModel):
                 notif_layout = "remove_mail_closing_extended.mail_notification_paynow_without_br_and_footer"
 
             # If 'Hide Header' and 'Hide Footer' is selected
-            if self.env['ir.config_parameter'].sudo().get_param('remove_mail_closing_extended.hide_bestregards') and self.env['ir.config_parameter'].sudo().get_param('remove_mail_closing_extended.hide_footer'):
+            if self.env['ir.config_parameter'].sudo().get_param('remove_mail_closing_extended.hide_header') and self.env['ir.config_parameter'].sudo().get_param('remove_mail_closing_extended.hide_footer'):
                 notif_layout = "remove_mail_closing_extended.mail_notification_paynow_without_header_and_footer"
 
             # If all the buttons are checked
